@@ -17,7 +17,10 @@ function download2(sfile, dfile)
 		crossDomain: true,
 		data: {filepath: sfile, filename:dfile},
 		success: function (resp) {
-			chrome.runtime.sendMessage({message:resp});
+			chrome.runtime.sendMessage({title: "Complete", message:resp});
+		},
+		error: function(XMLHttpRequest, textStatus, errorThrown) {
+			chrome.runtime.sendMessage({title: "Error", message:"Please Execute Mac Application"});
 		}});
 }
 

@@ -63,11 +63,11 @@ def download():
 
 	filename = download_from_portal(f, original_filename)
 	if filename:
-		response = make_response("Download Complete: "+filename.split('/')[-1])
+		response = make_response(filename.split('/')[-1])
 		response.headers['Access-Control-Allow-Origin'] = '*';
 		return response
 	else:
-		response = make_response("Download Fail: "+original_filename)
+		response = make_response("Fail: "+original_filename)
 		response.headers['Access-Control-Allow-Origin'] = '*';
 		return response
 

@@ -7,13 +7,16 @@ chrome.runtime.onMessage.addListener(function(msg, sender) {
 });
 
 chrome.runtime.onMessage.addListener(function(msg, sender) {
+	if (msg.title == undefined)
+		return;
 	if (msg.message == undefined)
 		return;
 	var opt ={
 		type: 'basic',
-		title: 'Complete',
+		title: msg.title,
 		message: msg.message,
 		iconUrl:'icon.png'
 		};
-	chrome.notifications.create('notify1', opt, function(id) { console.log("Last error:", chrome.runtime.lastError); });
+	var randomID = Math.random().toString(36).substring(7);
+	chrome.notifications.create(randomID, opt, function(id) { console.log("Last error:", chrome.runtime.lastError); });
 });
