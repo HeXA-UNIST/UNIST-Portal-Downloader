@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Unist Downloader",
+  "description": "This extension is for downloading unist portal site attachments.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "download.html"
+  },
+  "permissions": [
+	"notifications", "cookies", "tabs", "http://portal.unist.ac.kr/*"
+  ],
+  "content_scripts": [{
+	"matches":["http://portal.unist.ac.kr/*"],
+	"js":["content.js"],
+	"run_at" : "document_end"
+	},
+	{
+	"matches":["http://portal.unist.ac.kr/*"],
+	"js":["content_sub.js"],
+	"run_at" : "document_end",
+	"all_frames": true
+  }],
+  "background": {"scripts":["background.js"]}
+
+}
