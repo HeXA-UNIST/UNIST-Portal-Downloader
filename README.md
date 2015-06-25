@@ -7,7 +7,7 @@ Mac, Linux, Windows 어디서든 크롬이 있다면 사용이 가능합니다.
 Release
 -------
 - [Chrome Extension Download](https://chrome.google.com/webstore/detail/unist-downloader/kjmjiabmcihbmjjhemaleeoanimiejlp?hl=ko)
-- [Binary Download](https://www.dropbox.com/s/h6trzsvyzsm7n37/release.zip?dl=0)
+- [Binary Download](https://www.dropbox.com/s/n3hlug5r5skoqpy/release.zip?dl=0)
 
 Usage
 -----
@@ -18,7 +18,7 @@ Usage
 ![step1](./usage/step1.png?raw=true)
 
 ##### 2. Execute udownloader Mac Application
-[Binary Download](https://www.dropbox.com/s/h6trzsvyzsm7n37/release.zip?dl=0)를 설치 후 실행합니다.
+[Binary Download](https://www.dropbox.com/s/n3hlug5r5skoqpy/release.zip?dl=0)를 설치 후 실행합니다.
 
 ![step2](./usage/step2.png?raw=true)
 
